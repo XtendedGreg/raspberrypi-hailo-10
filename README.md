@@ -20,7 +20,7 @@ sudo apt upgrade
 ```
 sudo raspi-config
 ```
-GOTO: Advanced > PCIe Speed = 3
+Advanced > PCIe Speed = 3
 (reboot)
 
 ## 2. Install Drivers
@@ -141,14 +141,14 @@ cd raspberrypi-hailo-10/root
 ## 3. Copy files
 ### Copy Hailo Server Launch Script
 ```
-cp usr/local/bin/hailo-server /usr/local/bin/
-chmod +x /usr/local/bin/hailo-server
+sudo cp usr/local/bin/hailo-server /usr/local/bin/
+sudo chmod +x /usr/local/bin/hailo-server
 ```
 
 ### Copy Systemd Service Script
 ```
-cp etc/systemd/system/hailo-server.service /etc/systemd/system/
-chmod +x /etc/systemd/system/hailo-server.service
+sudo cp etc/systemd/system/hailo-server.service /etc/systemd/system/
+sudo chmod +x /etc/systemd/system/hailo-server.service
 ```
 
 ## 4. Enable Service to Start on Boot and Start Service Now
@@ -161,8 +161,3 @@ sudo systemctl start hailo-server.service
 ```
 reboot
 ```
-
-# Check Out the XtendedGreg YouTube Channel
-***Drop a Like and Subscribe to see more content like this!***
-
-[XtendedGreg Youtube Channel](https://www.youtube.com/@xtendedgreg)
