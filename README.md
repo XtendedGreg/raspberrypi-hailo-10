@@ -128,7 +128,7 @@ reboot
 # Install Scripts to Launch on Boot
 ## 1. Install Dependencies
 ```
-sudo apt install screen git
+sudo apt install git
 ```
 
 ## 2. Clone This Repository
