@@ -1,0 +1,14 @@
+[Unit]
+Description=Hailo-10H Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=idle
+ExecStart=/usr/local/bin/hailo-server.sh
+User=pi
+Restart=on-failure
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target
