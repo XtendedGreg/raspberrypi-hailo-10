@@ -7,11 +7,5 @@ if [ ! -z $1 ]; then
     exit 0
 fi
 
-cleanup(){
-    docker stop open-webui
-}
-
-TRAP cleanup EXIT
-
 docker run -d   --network=host   -e OLLAMA_BASE_URL=http://127.0.0.1:8000   -v open-webui:/app/backend/data   --name open-webui   --restart always   ghcr.io/open-webui/open-webui:main || docker start open-webui
 HAILO_MONITOR=1 hailo-ollama
