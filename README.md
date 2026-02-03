@@ -149,6 +149,7 @@ sudo chmod +x /usr/local/bin/hailo-server
 ```
 sudo cp etc/systemd/system/hailo-server.service /etc/systemd/system/
 sudo chmod +x /etc/systemd/system/hailo-server.service
+sudo sed -i "s/[USER]/$USER/g" filename
 ```
 
 ## 4. Enable Service to Start on Boot and Start Service Now
@@ -160,4 +161,35 @@ sudo systemctl start hailo-server.service
 ## 5. Reboot to Test
 ```
 reboot
+```
+
+# Updates
+## 1. Update GIT Repository
+```
+cd ~/raspberrypi-hailo-10/root
+git pull
+```
+
+## 2. Copy files
+### Copy Hailo Server Launch Script
+```
+sudo cp usr/local/bin/hailo-server /usr/local/bin/
+sudo chmod +x /usr/local/bin/hailo-server
+```
+
+### Copy Systemd Service Script
+```
+sudo cp etc/systemd/system/hailo-server.service /etc/systemd/system/
+sudo chmod +x /etc/systemd/system/hailo-server.service
+sudo sed -i "s/\[USER\]/$USER/g" /etc/systemd/system/hailo-server.service
+```
+
+## 3. Reload Systemd
+```
+sudo systemctl daemon-reload
+```
+
+## 4. Restart hailo-server
+```
+sudo systemctl restart hailo-server.service
 ```
