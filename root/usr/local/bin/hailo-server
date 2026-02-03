@@ -3,7 +3,6 @@
 
 if [ ! -z $1 ]; then
     docker stop open-webui
-    /usr/bin/screen -S hailo-server -X stuff "stop\n"
     echo $(date) - Stopping Hailo-Server | tee -a /var/log/hailo-server/hailo-server.log
     exit 0
 fi
