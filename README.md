@@ -201,12 +201,6 @@ Shows connection status and responses.
 tail -f /var/log/hailo-server/hailo-server.log
 ```
 
-## Hailo Runtime CLI Monitor
-Shows current Hailo resource utilization and running processes using the Hailo hardware.
-```
-hailortcli monitor
-```
-
 ## Systemd Service Status
 Check if the service is running or if it has crashed.
 ```
