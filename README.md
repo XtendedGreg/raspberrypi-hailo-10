@@ -193,3 +193,22 @@ sudo systemctl daemon-reload
 ```
 sudo systemctl restart hailo-server.service
 ```
+
+# Monitor Server Status
+## Tail Logs
+Shows connection status and responses.
+```
+tail -f /var/log/hailo-server/hailo-server.log
+```
+
+## Hailo Runtime CLI Monitor
+Shows current Hailo resource utilization and running processes using the Hailo hardware.
+```
+hailortcli monitor
+```
+
+## Systemd Service Status
+Check if the service is running or if it has crashed.
+```
+sudo systemctl status hailo-server.service
+```
