@@ -1,7 +1,7 @@
 # ***Hailo-10H and Raspberry Pi AI HAT+ 2 Installation Instructions for Raspberry Pi OS on Raspberry Pi 5***
 Written by: XtendedGreg February 2, 2026 [XtendedGreg Youtube Channel](https://www.youtube.com/@xtendedgreg)
 
-[![Watch the video](https://img.youtube.com/vi/########/maxresdefault.jpg)](https://youtube.com/live/###########)
+[![Watch the video](https://img.youtube.com/vi/NXKM3wsw4Ow/maxresdefault.jpg)](https://youtube.com/live/NXKM3wsw4Ow)
 
 ## Prerequisites
 - Hardware: Raspberry Pi 5 (8GB RAM recommended).
