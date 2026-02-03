@@ -12,8 +12,9 @@ export HAILO_MONITOR=1
 
 if [ ! -e /var/log/hailo-server ]; then
     sudo mkdir -p /var/log/hailo-server
+    sudo chmod -R 777 /var/log/hailo-server
 fi
 
-echo $(date) - Starting Hailo-Server | sudo tee -a /var/log/hailo-server/hailo-server.log
+echo $(date) - Starting Hailo-Server | tee -a /var/log/hailo-server/hailo-server.log
 
-hailo-ollama | sudo tee -a /var/log/hailo-server/hailo-server.log
+hailo-ollama | tee -a /var/log/hailo-server/hailo-server.log
