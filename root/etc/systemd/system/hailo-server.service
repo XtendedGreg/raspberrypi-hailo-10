@@ -5,7 +5,7 @@ Wants=network-online.target
 
 [Service]
 Type=idle
-ExecStart=/usr/bin/screen -DmS hailo-server /usr/local/bin/hailo-server
+ExecStart=/usr/local/bin/hailo-server
 ExecStop=/usr/local/bin/hailo-server stop
 User=root
 Restart=on-failure
