@@ -7,7 +7,7 @@ Wants=network-online.target
 Type=idle
 ExecStart=/usr/local/bin/hailo-server
 ExecStop=/usr/local/bin/hailo-server stop
-User=root
+User=[USER]
 Restart=on-failure
 RestartSec=20
 
