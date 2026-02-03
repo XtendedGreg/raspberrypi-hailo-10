@@ -43,7 +43,7 @@ git clone https://github.com/hailo-ai/hailo_model_zoo_genai.git
 
 ### Compile Models
 ```
-cd ~/hailo-model-zoo-genai/
+cd ~/hailo_model_zoo_genai/
 mkdir build && cd build
 cmake -DCMAKE_BUILD_TYPE=Release ..
 cmake --build . -j4
@@ -52,7 +52,7 @@ cmake --build . -j4
 ## 4. Move files to runtime locations
 ### Exec Files
 ```
-cd ~/hailo-model-zoo-genai/build
+cd ~/hailo_model_zoo_genai/genai/build
 mkdir -p ~/.local/bin
 cp ./src/apps/server/hailo-ollama ~/.local/bin/
 ```
@@ -93,7 +93,7 @@ sudo usermod -aG docker $USER
 
 ## 9. Run Docker and the Hailo Server
 ```
-docker run -d   --network=host   -e OLLAMA_BASE_URL=http://127.0.0.1:8000   -v open-webui:/app/backend/data   --name open-webui   --restart always   ghcr.io/open-webui/open-webui:main
+sudo docker run -d   --network=host   -e OLLAMA_BASE_URL=http://127.0.0.1:8000   -v open-webui:/app/backend/data   --name open-webui   --restart always   ghcr.io/open-webui/open-webui:main
 hailo-ollama
 ```
 
@@ -149,7 +149,7 @@ sudo chmod +x /usr/local/bin/hailo-server
 ```
 sudo cp etc/systemd/system/hailo-server.service /etc/systemd/system/
 sudo chmod +x /etc/systemd/system/hailo-server.service
-sudo sed -i "s/[USER]/$USER/g" filename
+sudo sed -i "s/\[USER\]/$USER/g" /etc/systemd/system/hailo-server.service
 ```
 
 ## 4. Enable Service to Start on Boot and Start Service Now
